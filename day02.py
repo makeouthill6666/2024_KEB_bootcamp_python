@@ -47,4 +47,13 @@ print (type(cash))
 
 base_number = int(input('Input base nubmer : '))
 exponent_number = int(input('Input base nubmer : '))
-print(f'밑{base_number}, 지수{exponent_number}, 결과{base_number**exponent_number}')
+# f-string
+print(f'밑 {base_number}, 지수 {exponent_number}, 결과 {base_number**exponent_number}')
+
+# format function
+print('밑 {0}, 지수 {1}, 결과 {2}'.format(base_number, exponent_number, pow(base_number, exponent_number)))
+print('밑 {}, 지수 {}, 결과 {}'.format(base_number, exponent_number, pow(base_number, exponent_number)))
+
+# c like
+print('밑 %d, 지수 %d, 결과 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
+
