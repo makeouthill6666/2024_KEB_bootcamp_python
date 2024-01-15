@@ -47,4 +47,4 @@ print (type(cash))
 
 base_number = int(input('Input base nubmer : '))
 exponent_number = int(input('Input base nubmer : '))
-print(f'밑{base_number}', 지수{exponent_number}, 결과{base_number**exponent_number})
+print(f'밑{base_number}, 지수{exponent_number}, 결과{base_number**exponent_number}')
