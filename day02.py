@@ -22,3 +22,20 @@ test9=87
 # 9test=98
 _9test=40
 print(test9, _9test)
+
+# y=x+5 NameError: name 'x' is not defined
+# x=1
+# Print(y)
+
+print (type(3.14))
+print(type(3.14) == float)
+# print(ininstance(3.14, float))
+# print(ininstance("a", float))
+
+artists = ['BTS','Newjeans','a','b','c']
+groups = artists
+print(artists)
+artists[2] ='z'
+print(artists, groups)
+
+
