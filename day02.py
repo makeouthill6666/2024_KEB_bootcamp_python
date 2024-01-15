@@ -101,8 +101,15 @@
 #
 # print(10**100)
 
-temp = []
-if temp :
-    print("존재")
-else :
-    print("공백")
+# temp = []
+# if temp :
+#     print("존재")
+# else :
+#     print("공백")
+
+letter = input('Input alphabet : ')
+vowels = {'a', 'e', 'i', 'o', 'u'}
+if letter in vowels:
+    print(f'{letter} is a vowel')
+else:
+    print(f'{letter} is a consonant')
