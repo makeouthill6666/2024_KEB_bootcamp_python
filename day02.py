@@ -79,3 +79,7 @@ print(dec, octal, hexadecimal, binary)
 print(chr(binary))
 
 print(ord('0'))
+
+# (32°F − 32) × 5/9 = 0°C
+fahrenheit = float(input('Input Fahrenheit : '))
+print(f'Fahrenheit: {fahrenheit}F, Celsius : {((fahrenheit-32.0) * 5/9):.4f}C')
