@@ -85,13 +85,15 @@
 # print(f'Fahrenheit: {fahrenheit}F, Celsius : {((fahrenheit-32.0) * 5/9):.4f}C')
 
 #(0°C × 9/5) + 32 = 32°F
-menu = input("1) Fahrenheit -> Celsius 2) Celsius -> Fahrenheit 3) Quit : ")
-if menu == '1':
-    fahrenheit = float(input('Input Fahrenheit : '))
-    print(f'Fahrenheit: {fahrenheit}F, Celsius: {((fahrenheit-32.0) * 5/9):.4f}C')
-elif menu == '2':
-    celsius = float(input('Input Celsius : '))
-    print(f'Celsius: {celsius}C, Fahrenheit: {((celsius*9/5)+32):.4f}F ')
+# menu = input("1) Fahrenheit -> Celsius 2) Celsius -> Fahrenheit 3) Quit : ")
+# if menu == '1':
+#     fahrenheit = float(input('Input Fahrenheit : '))
+#     print(f'Fahrenheit: {fahrenheit}F, Celsius: {((fahrenheit-32.0) * 5/9):.4f}C')
+# elif menu == '2':
+#     celsius = float(input('Input Celsius : '))
+#     print(f'Celsius: {celsius}C, Fahrenheit: {((celsius*9/5)+32):.4f}F ')
+# else :
+#     print('Terminate Program.')
 
 # print(int('11', 16))
 # print(int('1A', 16))
@@ -99,3 +101,8 @@ elif menu == '2':
 #
 # print(10**100)
 
+temp = []
+if temp :
+    print("존재")
+else :
+    print("공백")
