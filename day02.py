@@ -57,15 +57,25 @@ print (type(cash))
 # # c like
 # print('밑 %d, 지수 %d, 결과 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
 
-First_number = int(input("First number : "))
-Second_number = int(input("Second Number : "))
+# First_number = int(input("First number : "))
+# Second_number = int(input("Second Number : "))
+#
+# quotient = First_number // Second_number
+# remainder = First_number % Second_number
+# print (f'몫{quotient}, 나머지{remainder}')
+#
+#
+# quotient = First_number // Second_number
+# remainder = First_number % Second_number
+# print(f'몫{divmod(First_number, Second_number)[0]} 나머지{divmod(First_number, Second_number)[1]}')
 
-quotient = First_number // Second_number
-remainder = First_number % Second_number
-print (f'몫{quotient}, 나머지{remainder}')
+dec = 65
+octal = 0o101
+hexadecimal = 0x41
+binary = 0b01000001
 
+print(dec, octal, hexadecimal, binary)
 
-quotient = First_number // Second_number
-remainder = First_number % Second_number
-print(f'몫{divmod(First_number, Second_number)[0]} 나머지{divmod(First_number, Second_number)[1]}')
+print(chr(binary))
 
+print(ord('0'))
