@@ -45,15 +45,27 @@ cash = (5_000_000)
 print (cash)
 print (type(cash))
 
-base_number = int(input('Input base nubmer : '))
-exponent_number = int(input('Input base nubmer : '))
-# f-string
-print(f'밑 {base_number}, 지수 {exponent_number}, 결과 {base_number**exponent_number}')
+# base_number = int(input('Input base nubmer : '))
+# exponent_number = int(input('Input base nubmer : '))
+# # f-string
+# print(f'밑 {base_number}, 지수 {exponent_number}, 결과 {base_number**exponent_number}')
+#
+# # format function
+# print('밑 {0}, 지수 {1}, 결과 {2}'.format(base_number, exponent_number, pow(base_number, exponent_number)))
+# print('밑 {}, 지수 {}, 결과 {}'.format(base_number, exponent_number, pow(base_number, exponent_number)))
+#
+# # c like
+# print('밑 %d, 지수 %d, 결과 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
 
-# format function
-print('밑 {0}, 지수 {1}, 결과 {2}'.format(base_number, exponent_number, pow(base_number, exponent_number)))
-print('밑 {}, 지수 {}, 결과 {}'.format(base_number, exponent_number, pow(base_number, exponent_number)))
+First_number = int(input("First number : "))
+Second_number = int(input("Second Number : "))
 
-# c like
-print('밑 %d, 지수 %d, 결과 %d' % (base_number, exponent_number, pow(base_number, exponent_number)))
+quotient = First_number // Second_number
+remainder = First_number % Second_number
+print (f'몫{quotient}, 나머지{remainder}')
+
+
+quotient = First_number // Second_number
+remainder = First_number % Second_number
+print(f'몫{divmod(First_number, Second_number)[0]} 나머지{divmod(First_number, Second_number)[1]}')
 
