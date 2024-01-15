@@ -38,4 +38,6 @@ print(artists)
 artists[2] ='z'
 print(artists, groups)
 
-
+money = (5,000,000)
+print (money)
+print (type(money))
