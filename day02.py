@@ -11,4 +11,15 @@ subjects[3] = 'linux'
 print (subjects[3])
 
 
-99 = 71
+# 99 = 71
+
+abc = 7
+Abc = 9
+ABC = 6
+print (abc, Abc, ABC)
+
+test9=87
+# 9test=98
+_9test=40
+
+print(test9, _9test)
