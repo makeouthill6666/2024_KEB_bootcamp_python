@@ -81,6 +81,51 @@
 
 # .join()
 # split반대개념 list를 문자열로
-subjects = ["python", 'c++', "database"]
-subjects_string = " / ".join(subjects)
-print(subjects_string)
+# subjects = ["python", 'c++', "database"]
+# subjects_string = " / ".join(subjects)
+# print(subjects_string)
+
+# course="2024 KEB Bootcamp"
+# print(course.replace('KEB','Inha'))
+# print(course)
+# course = course.replace('KEB','Inha')
+# # 원본을 바꾸고 싶을땐 재할당
+# print(course)
+
+course="KEB 2024 KEB .Bootcamp...!@#"
+# course = course.replace('KEB','INHA',1)
+# # .replace(old, new, count)
+# print(course)
+# print(course.strip(".!@#"))
+# INHA 2024 KEB .Bootcamp
+# 중간에 있는 문자는 제거할 수 없다
+print(course.find('KEB'))
+print(course.rfind('KEB'))
+print(course.index('KEB'))
+# print(course.index('ㅋ'))
+
+# .strip()
+# 양측공백 제거
+# .lstrip()
+# 좌측공백 제거
+# .rstrip()
+# 우측공백 제거
+# .strip('문자')
+# 양측에 있는 단일문자 제거
+
+# serach and select
+# .startwith()
+# .endswith()
+# 문자의 시작과 끝을 검사
+# True or False
+#
+# .find() 앞에서부터 몇번째인지
+# .rfind() 뒤에서부터 몇번째인지
+# 찾지 못하면 -1 반환
+# .index() 동일 하지만 튜플, 리스트에서 주로
+# .rindex()
+# 찾지 못하면 예외처리
+# ValueError: substring not found
+
+
+
