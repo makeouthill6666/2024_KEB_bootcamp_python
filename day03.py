@@ -22,11 +22,32 @@
 # university = r"inha\nUniversity"
 # print(university)
 #
-# university = "inha\nUnviersity"
+university = "inha\nUnviersity"
 # print(university)
+
+slicing
+print(university[:4])
+print(university[:-11])
+print(len(university))
+print(university[0:len(university)])
+print(university[:15])
+print(university[::1])
+print(university[::2])
 
 # concatenation
 # number1=input("number1")
 # number2=input("number2")
 # print(number1+number2)
 # 43
+# print(number1*3) O
+# print(number1+2) X
+
+# name = 'Henny'
+# print(name.replace('H', 'P'))
+# print('P' + name[1:])
+#
+# [:] 전부
+# [start:] start부터 끝까지
+# [:end] 처음부터 end-1까지
+# [start:end] start부터 end-1까지
+
