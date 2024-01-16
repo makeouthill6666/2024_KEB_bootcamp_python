@@ -276,11 +276,28 @@
 #     print(letter)
 
 
-word = 'thud'
-for k in range (0, len(word), 1):
-    print(word[k], end= ' ')
+# word = 'thud'
+# for k in range (0, len(word), 1):
+#     print(word[k], end= ' ')
+#
+# print()
+#
+# for i in range(5):
+#     print(i)
 
-print()
+number = int(input("input number : "))
+is_prime = True #int->bool
+if number<2 :
+    print(f'{number} is not prime number')
+else :
+    for i in range(2, number):
+        if number%i == 0:
+            is_prime = False # remove +
+            break
+        print(i, end=' ')
 
-for i in range(5):
-    print(i)
+    #if cnt==0:
+    if is_prime:
+        print(f'{number} is prime number')
+    else :
+        print(f'{number} is not prime number')
