@@ -18,4 +18,15 @@
 # print(f'{chr(63)}\n{chr(64)}')
 # \n 줄바꿈
 
+# raw string
+# university = r"inha\nUniversity"
+# print(university)
+#
+# university = "inha\nUnviersity"
+# print(university)
 
+# concatenation
+# number1=input("number1")
+# number2=input("number2")
+# print(number1+number2)
+# 43
