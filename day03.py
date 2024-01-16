@@ -127,24 +127,92 @@
 # 찾지 못하면 예외처리
 # ValueError: substring not found
 
-subjects = "python c++ database linux"
-subject = input("수강신청과목 입력 : ")
-if subjects.find(subject) != -1:
-    print(f"해당 과목은 존재합니다. 위치는 {subjects.find(subject)}번인덱스입니다.")
-else :
-    print('해당과목은 존재하지 않습니다')
+# subjects = "python c++ database linux"
+# subject = input("수강신청과목 입력 : ")
+# if subjects.find(subject) != -1:
+#     print(f"해당 과목은 존재합니다. 위치는 {subjects.find(subject)}번인덱스입니다.")
+# else :
+#     print('해당과목은 존재하지 않습니다')
+#
+#
+#
+# subjects = "python c++ database linux"
+# subject = input("수강신청과목 입력 : ")
+# if subjects.index(subject):
+#     print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번인덱스입니다.")
+# else :
+#     print('해당과목은 존재하지 않습니다')
+#
+#
+#
+# subjects = "python c++ database linux"
+# subject = input("수강신청과목 입력 : ")
+#     try:
+#         print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번인덱스입니다.")
+#     except ValueError:
+#         print('해당과목은 존재하지 않습니다')
+# .isalnum()
+# 모두 알파벳 or 숫자인가
+# is -> True/False
 
-subjects = "python c++ database linux"
-subject = input("수강신청과목 입력 : ")
-if subjects.index(subject):
-    print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번인덱스입니다.")
-else :
-    print('해당과목은 존재하지 않습니다')
+# # Case
+# .captialize()
+# 첫글자 대문자
+# .title()
+# 항상 첫글자 대문자
+# .upper()
+# 모두 대문자
+# .lower()
+# 모두 소문자
+# .swapcase()
+# 대소문자 반대로
+#
+# # alginmnent
+# () 총 몇칸
+# .center()
+# 가운데정렬
+# .ljust()
+# 좌측정렬
+# .rjust()
+# 우측정렬
 
-    subjects = "python c++ database linux"
-    subject = input("수강신청과목 입력 : ")
-    try:
-        print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번인덱스입니다.")
-    except ValueError:
-        print('해당과목은 존재하지 않습니다')
+# Formating
+# old style %
 
+# print('%s' % 42)
+# # '42'
+# 문자열 string
+#
+# print('%d' % 42)
+# # '42'
+# 10진수 decimal
+#
+# print('%x' % 42)
+# # '2a'
+# 16진수 hexadecimal
+#
+# print('%o' % 42)
+# # '52'
+# 8진수 octal
+#
+# -좌측정렬
+# +우측정렬
+# .최소너비
+
+
+# new style
+
+# {} .format(a,b)
+# d={'a','b','c'} 딕셔너리
+
+# subjects = {'python' : 'kim', 'c++' : 'sung', 'datastructure' : 'kim', 'database' : 'kang'}
+# print("{0[python]}, {0[datastructure]}".format(subjects))
+# 0은 딕셔너리 d에서 첫번째 인수
+#
+# ''채우기
+# :< 좌측정렬
+# :> 우측정렬
+# :^ 중앙정렬
+# :.^ 중앙정렬중 .으로 채우기
+
+# f-stringss
