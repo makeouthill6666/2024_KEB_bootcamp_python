@@ -246,20 +246,41 @@
 # else :
 #     print(f'{number} is not prime number')
 
-number = int(input("input number : "))
-is_prime = True #int->bool
-if number<2 :
-    print(f'{number} is not prime number')
-else :
-    i = 2
-    while i < number:
-        if number%i == 0:
-            is_prime = False # remove +
-            break
-        print(i, end=' ')
-        i = i+1
-    #if cnt==0:
-    if is_prime:
-        print(f'{number} is prime number')
-    else :
-        print(f'{number} is not prime number')
+# number = int(input("input number : "))
+# is_prime = True #int->bool
+# if number<2 :
+#     print(f'{number} is not prime number')
+# else :
+#     i = 2
+#     while i < number:
+#         if number%i == 0:
+#             is_prime = False # remove +
+#             break
+#         print(i, end=' ')
+#         i = i+1
+#     #if cnt==0:
+#     if is_prime:
+#         print(f'{number} is prime number')
+#     else :
+#         print(f'{number} is not prime number')
+
+# word = 'thud'
+# offset = 0
+# while offset < len(word):
+#     print(word[offset], end= ' ')
+#     offset +=1
+# # end= ' ' 가로로 배열
+# print()
+# #list tuple dic
+# for letter in word:
+#     print(letter)
+
+
+word = 'thud'
+for k in range (0, len(word), 1):
+    print(word[k], end= ' ')
+
+print()
+
+for i in range(5):
+    print(i)
