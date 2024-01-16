@@ -92,16 +92,16 @@
 # # 원본을 바꾸고 싶을땐 재할당
 # print(course)
 
-course="KEB 2024 KEB .Bootcamp...!@#"
+# course="KEB 2024 KEB .Bootcamp...!@#"
 # course = course.replace('KEB','INHA',1)
 # # .replace(old, new, count)
 # print(course)
 # print(course.strip(".!@#"))
 # INHA 2024 KEB .Bootcamp
 # 중간에 있는 문자는 제거할 수 없다
-print(course.find('KEB'))
-print(course.rfind('KEB'))
-print(course.index('KEB'))
+# print(course.find('KEB'))
+# print(course.rfind('KEB'))
+# print(course.index('KEB'))
 # print(course.index('ㅋ'))
 
 # .strip()
@@ -127,5 +127,24 @@ print(course.index('KEB'))
 # 찾지 못하면 예외처리
 # ValueError: substring not found
 
+subjects = "python c++ database linux"
+subject = input("수강신청과목 입력 : ")
+if subjects.find(subject) != -1:
+    print(f"해당 과목은 존재합니다. 위치는 {subjects.find(subject)}번인덱스입니다.")
+else :
+    print('해당과목은 존재하지 않습니다')
 
+subjects = "python c++ database linux"
+subject = input("수강신청과목 입력 : ")
+if subjects.index(subject):
+    print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번인덱스입니다.")
+else :
+    print('해당과목은 존재하지 않습니다')
+
+    subjects = "python c++ database linux"
+    subject = input("수강신청과목 입력 : ")
+    try:
+        print(f"해당 과목은 존재합니다. 위치는 {subjects.index(subject)}번인덱스입니다.")
+    except ValueError:
+        print('해당과목은 존재하지 않습니다')
 
