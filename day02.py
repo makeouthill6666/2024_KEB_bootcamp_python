@@ -29,9 +29,32 @@
 #
 # print (type(3.14))
 # print(type(3.14) == float)
-# # print(ininstance(3.14, float))
-# # print(ininstance("a", float))
-#
+# print(isinstance(3.14, float))
+# print(isinstance("a", float))
+
+# while True :
+#     Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3) Quit : ")
+#     print()
+#     if Menu not in ['1', '2', '3'] :
+#         print("Please choose from the menu.")
+#     if Menu == '1' :
+#             Celsius = (float(input('Input Celsius : ')))
+#             if (isinstance(Celsius,int) or isinstance(Celsius, float)):
+#                 Celsius=(float(input('Input Celsius : ')))
+#                 print(f'{Celsius}C, {(Celsius * 9 / 5) + 32:.4f}F')
+#             else :
+#                 print("Invalid input. Please enter the number.")
+#     elif Menu == '2' :
+#         try :
+#             Fahrenheit = float(input('Input Fahrenheit : '))
+#             print(f'{Fahrenheit}F, {(Fahrenheit-32)*5/9:.4f}C')
+#         except ValueError :
+#             print("Invalid input. Please enter the number.")
+#     elif Menu == '3' :
+#         print('Terminating the program.')
+#         break
+#     print()
+
 # artists = ['BTS','Newjeans','a','b','c']
 # groups = artists
 # print(artists)
@@ -107,9 +130,42 @@
 # else :
 #     print("공백")
 
-letter = input('Input alphabet : ')
-vowels = {'a', 'e', 'i', 'o', 'u'}
-if letter in vowels:
-    print(f'{letter} is a vowel')
-else:
-    print(f'{letter} is a consonant')
+# letter = input('Input alphabet : ')
+# vowels = {'a', 'e', 'i', 'o', 'u'}
+# if letter in vowels:
+#     print(f'{letter} is a vowel')
+# else:
+#     print(f'{letter} is a consonant')
+
+# menu = input("1) Fahrenheit -> Celsius 2) Celsius -> Fahrenheit 3) Quit : ")
+# if menu == '1':
+#     fahrenheit = float(input('Input Fahrenheit : '))
+#     print(f'Fahrenheit: {fahrenheit}F, Celsius: {((fahrenheit-32.0) * 5/9):.4f}C')
+# elif menu == '2':
+#     celsius = float(input('Input Celsius : '))
+#     print(f'Celsius: {celsius}C, Fahrenheit: {((celsius*9/5)+32):.4f}F ')
+# else :
+#     print('Terminate Program.')
+
+
+
+menu = input("1, 2, 3")
+if menu == '1' :
+    화씨 = float(input('화씨 넣어'))
+    print((화씨-32)*5/9)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
