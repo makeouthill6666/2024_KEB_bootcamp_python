@@ -285,19 +285,42 @@
 # for i in range(5):
 #     print(i)
 
-number = int(input("input number : "))
-is_prime = True #int->bool
-if number<2 :
-    print(f'{number} is not prime number')
-else :
-    for i in range(2, number):
-        if number%i == 0:
-            is_prime = False # remove +
-            break
-        print(i, end=' ')
+# number = int(input("input number : "))
+# is_prime = True #int->bool
+# if number<2 :
+#     print(f'{number} is not prime number')
+# else :
+#     for i in range(2, number):
+#         if number%i == 0:
+#             is_prime = False # remove +
+#             break
+#         print(i, end=' ')
+#
+#     #if cnt==0:
+#     if is_prime:
+#         print(f'{number} is prime number')
+#     else :
+#         print(f'{number} is not prime number')
+#
+# # range -> generator
+# # list나 tuple을 만들어준다
+#
+# for x in range(2, -1, -1):
+#     print(x)
+#
+# list(range(2, 1, -1))
 
-    #if cnt==0:
-    if is_prime:
-        print(f'{number} is prime number')
+
+numbers = input("input first number second number").split()
+n1 = int(numbers[0])
+n2 = int(numbers[1])
+for number in range (n1, n2+1):
+    is_prime = True #int->bool
+    if number<2 :
+        pass #처음봄
     else :
-        print(f'{number} is not prime number')
+        for i in range(2, number):
+            if number %i == 0:
+                is_prime = False # remove +
+                break
+        if is_prime: print(number, end=' ')
