@@ -216,3 +216,50 @@
 # :.^ 중앙정렬중 .으로 채우기
 
 # f-stringss
+
+#prime number
+# number = int(input("input number : "))
+# cnt = 0
+# i = 1
+# while i <= number:
+#     if number%i == 0:
+#         cnt=cnt+1
+#     i = i+1
+# if cnt == 2:
+#     print(f'{number} is prime number')
+# else :
+#     print(f'{number} is not prime number')
+
+
+
+# number = int(input("input number : "))
+# cnt = 0
+# i = 2
+# while i < number:
+#     if number%i == 0:
+#         cnt=cnt+1
+#         break
+#     print(i, end=' ')
+#     i = i+1
+# if cnt == 0:
+#     print(f'{number} is prime number')
+# else :
+#     print(f'{number} is not prime number')
+
+number = int(input("input number : "))
+is_prime = True #int->bool
+if number<2 :
+    print(f'{number} is not prime number')
+else :
+    i = 2
+    while i < number:
+        if number%i == 0:
+            is_prime = False # remove +
+            break
+        print(i, end=' ')
+        i = i+1
+    #if cnt==0:
+    if is_prime:
+        print(f'{number} is prime number')
+    else :
+        print(f'{number} is not prime number')
