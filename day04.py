@@ -13,6 +13,7 @@
 # # n1, n2 = n2, n1 # packing & unpacking
 # t7=()
 # print(type(t7))
+import copy
 
 # a='gr',
 # b=('gr',)
@@ -48,12 +49,12 @@
 #
 # # tuple - immutable / list - mutable 성적 마감돼도 바꿀수있다
 
-splitme = 'a/b//c/d///e'
-print(splitme.split('/'))
-print(splitme.split('//'))
-
-# list.reverse
-subjects  = ["c++", "java", "python","java", "5", "9", "안녕"]
+# splitme = 'a/b//c/d///e'
+# print(splitme.split('/'))
+# print(splitme.split('//'))
+#
+# # list.reverse
+# subjects  = ["c++", "java", "python","java", "5", "9", "안녕"]
 
 
 # subjects[::-1]
@@ -66,16 +67,16 @@ subjects  = ["c++", "java", "python","java", "5", "9", "안녕"]
 # print(subjects)
 # subjects.clear()
 # print(subjects)
-subjects.sort()
-print(subjects)
-# 숫자, 영어, 한글 순
-
-subjects.sort(reverse=True) #역순
-print(subjects)
-
-copy_subjects = sorted(subjects)
-print(subjects)
-print(copy_subjects)
+# subjects.sort()
+# print(subjects)
+# # 숫자, 영어, 한글 순
+#
+# subjects.sort(reverse=True) #역순
+# print(subjects)
+#
+# copy_subjects = sorted(subjects)
+# print(subjects)
+# print(copy_subjects)
 
 
 # ['c++', 'java', 'python']
@@ -92,3 +93,14 @@ print(copy_subjects)
 # list.append()로 병합하면 list 안에 list 생성
 # [a,b,c,[other list]]
 
+subjects = ["a", ["b", "c"], "d"]
+a = subjects
+b = subjects.copy()
+c = list(subjects) #mutable shallow copy 전부 바뀜
+d = subjects[:]
+e = copy.deepcopy(a)
+print(subjects, a, b, c, d, e)
+
+subjects[1][1] = "x"
+print(subjects, a, b, c, d, e)
+# e -> ['a', ['b', 'c'], 'd'] 완전히 분리된 집을 따로 사준다
