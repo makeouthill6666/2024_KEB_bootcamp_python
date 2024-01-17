@@ -113,7 +113,7 @@
 # .strip('문자')
 # 양측에 있는 단일문자 제거
 
-# serach and select
+# search and select
 # .startwith()
 # .endswith()
 # 문자의 시작과 끝을 검사
@@ -156,7 +156,7 @@
 # is -> True/False
 
 # # Case
-# .captialize()
+# .capitalize()
 # 첫글자 대문자
 # .title()
 # 항상 첫글자 대문자
@@ -167,7 +167,7 @@
 # .swapcase()
 # 대소문자 반대로
 #
-# # alginmnent
+# # alignment
 # () 총 몇칸
 # .center()
 # 가운데정렬
@@ -215,7 +215,7 @@
 # :^ 중앙정렬
 # :.^ 중앙정렬중 .으로 채우기
 
-# f-stringss
+# f-strings
 
 #prime number
 # number = int(input("input number : "))
@@ -311,20 +311,20 @@
 # list(range(2, 1, -1))
 
 
-numbers = input("input first number second number").split()
-n1 = int(numbers[0])
-n2 = int(numbers[1])
-
-if n1 > n2 :
-    n1, n2 = n2, n1
-
-for number in range (n1, n2+1):
-    is_prime = True #int->bool 이 자리가 아니라 for 바깥에 있으면 첫번째 말고 다른 수가 안나옴 '한번 false가 되면 계속 false여서'
-    if number<2 :
-        pass #처음봄
-    else :
-        for i in range(2, number):
-            if number %i == 0:
-                is_prime = False # remove +
-                break
-        if is_prime: print(number, end=' ')
+# numbers = input("input first number second number").split()
+# n1 = int(numbers[0])
+# n2 = int(numbers[1])
+#
+# if n1 > n2 :
+#     n1, n2 = n2, n1
+#
+# for number in range (n1, n2+1):
+#     is_prime = True #int->bool 이 자리가 아니라 for 바깥에 있으면 첫번째 말고 다른 수가 안나옴 '한번 false가 되면 계속 false여서'
+#     if number<2 :
+#         pass #처음봄
+#     else :
+#         for i in range(2, number):
+#             if number %i == 0:
+#                 is_prime = False # remove +
+#                 break
+#         if is_prime: print(number, end=' ')
