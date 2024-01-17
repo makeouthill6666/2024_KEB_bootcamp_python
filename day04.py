@@ -144,3 +144,24 @@ import copy
 #
 # tuple comprehension은 없다
 
+sugang = dict(python='kim', db='kang', cpp='sung')
+# print (sugang)
+# sugang['datastructure']='kim' #add
+# print (sugang)
+# sugang['datastructure']='park' #update
+# print(sugang)
+# print(sugang['db'])
+# print(sugang.get('db'))
+# print(sugang.get('opensource', "subject didn't exist"))
+for subject, professor in sugang.items() :
+    print(f'과목은 {subject}, 담당교수는 {professor}입니다.')
+for s in sugang.items():
+    print(s)
+#tuple로 나옴
+for k in sugang:
+    print(k)
+#위 아래 두개가 동일
+for k in sugang.keys():
+    print(k)
+for v in sugang.values():
+    print(v)
