@@ -314,8 +314,12 @@
 numbers = input("input first number second number").split()
 n1 = int(numbers[0])
 n2 = int(numbers[1])
+
+if n1 > n2 :
+    n1, n2 = n2, n1
+
 for number in range (n1, n2+1):
-    is_prime = True #int->bool
+    is_prime = True #int->bool 이 자리가 아니라 for 바깥에 있으면 첫번째 말고 다른 수가 안나옴 '한번 false가 되면 계속 false여서'
     if number<2 :
         pass #처음봄
     else :
