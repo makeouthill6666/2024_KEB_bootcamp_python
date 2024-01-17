@@ -93,14 +93,54 @@ import copy
 # list.append()로 병합하면 list 안에 list 생성
 # [a,b,c,[other list]]
 
-subjects = ["a", ["b", "c"], "d"]
-a = subjects
-b = subjects.copy()
-c = list(subjects) #mutable shallow copy 전부 바뀜
-d = subjects[:]
-e = copy.deepcopy(a)
-print(subjects, a, b, c, d, e)
+# subjects = ["a", ["b", "c"], "d"]
+# a = subjects
+# b = subjects.copy()
+# c = list(subjects) #mutable shallow copy 전부 바뀜
+# d = subjects[:]
+# e = copy.deepcopy(a)
+# print(subjects, a, b, c, d, e)
+#
+# subjects[1][1] = "x"
+# print(subjects, a, b, c, d, e)
+# # e -> ['a', ['b', 'c'], 'd'] 완전히 분리된 집을 따로 사준다
 
-subjects[1][1] = "x"
-print(subjects, a, b, c, d, e)
-# e -> ['a', ['b', 'c'], 'd'] 완전히 분리된 집을 따로 사준다
+# zip() list를 묶을 수 있다
+
+# number_list = []
+# for number in range(1, 6):
+#     number_list.append(number)
+# print (number_list)
+#
+# number_list = [number for number in range(1, 6)]
+# print(number_list)
+
+# squares = list()
+# squares.append(1*1)
+# squares.append(2*2)
+# squares.append(3*3)
+# squares.append(4*4)
+# squares.append(5*5)
+# print(squares)
+#
+# # list comprehension
+# squares = list()
+# for i in range(1, 6, 1):
+#     squares. append(i*i)
+# print(squares)
+#
+# # more comprehnesion
+# squares = [i*i for i in range(1, 6, 1)]
+# print (squares)
+#
+# rows = range(1,4)
+# cols = range(1,3)
+# cells=[(row, col) for row in rows for col in cols]
+# for cell in cells :
+#     print (cell)
+
+# tuple 적은 공간 손상 염려 없음 딕셔너리 키
+# list 일반적으로 더 자주 사용
+#
+# tuple comprehension은 없다
+
