@@ -144,24 +144,45 @@ import copy
 #
 # tuple comprehension은 없다
 
-sugang = dict(python='kim', db='kang', cpp='sung')
-# print (sugang)
-# sugang['datastructure']='kim' #add
-# print (sugang)
-# sugang['datastructure']='park' #update
-# print(sugang)
-# print(sugang['db'])
-# print(sugang.get('db'))
-# print(sugang.get('opensource', "subject didn't exist"))
-for subject, professor in sugang.items() :
-    print(f'과목은 {subject}, 담당교수는 {professor}입니다.')
-for s in sugang.items():
-    print(s)
-#tuple로 나옴
-for k in sugang:
-    print(k)
-#위 아래 두개가 동일
-for k in sugang.keys():
-    print(k)
-for v in sugang.values():
-    print(v)
+# sugang = dict(python='kim', db='kang', cpp='sung')
+# # print (sugang)
+# # sugang['datastructure']='kim' #add
+# # print (sugang)
+# # sugang['datastructure']='park' #update
+# # print(sugang)
+# # print(sugang['db'])
+# # print(sugang.get('db'))
+# # print(sugang.get('opensource', "subject didn't exist"))
+# for subject, professor in sugang.items() :
+#     print(f'과목은 {subject}, 담당교수는 {professor}입니다.')
+# for s in sugang.items():
+#     print(s)
+# #tuple로 나옴
+# for k in sugang:
+#     print(k)
+# #위 아래 두개가 동일
+# for k in sugang.keys():
+#     print(k)
+# for v in sugang.values():
+#     print(v)
+
+drinks_foods = {"위스키" : "초콜릿", "와인": "치즈", "소주": "삽겹살", "고량주" : "양꼬치"}
+drinks_foods_keys=list(drinks_foods)
+while True :
+    menu = input(
+        f'다음 술중에 고르세요\n1) {drinks_foods_keys[0]}, 2) {drinks_foods_keys[1]}, 3) {drinks_foods_keys[2]}, 4) {drinks_foods_keys[3]}, 5) 종료 : ')
+    if menu == '1':
+        print(f'{drinks_foods_keys[0]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[0]]}입니다')
+        print()
+    elif menu == '2':
+        print(f'{drinks_foods_keys[1]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[1]]}입니다')
+        print()
+    elif menu == '3':
+        print(f'{drinks_foods_keys[2]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[2]]}입니다')
+        print()
+    elif menu == '4':
+        print(f'{drinks_foods_keys[3]}에 어울리는 안주는 {drinks_foods[drinks_foods_keys[3]]}입니다')
+        print()
+    elif menu == '5':
+        print('다음에 또 오세요')
+        break
