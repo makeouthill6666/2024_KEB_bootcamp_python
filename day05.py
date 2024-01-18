@@ -81,12 +81,22 @@
 # print(x())
 # # x() -> inner_func()
 
-numbers = ["7", "-11", "3"]
-plus = 0
-for i in numbers :
-    plus = plus + int(i)
-print(plus)
+# numbers = ["7", "-11", "3"]
+# plus = 0
+# for i in numbers :
+#     plus = plus + int(i)
+# print(plus)
+#
+# print(sum(map(int, numbers))) #????
 
-print(sum(map(int, numbers))) #????
 
+def squares(n):
+    return n*n
 
+even_numbers =[i for i in range(51) if i % 2 == 0]
+print(even_numbers)
+
+print(tuple(map(squares, even_numbers)))
+print(tuple(map(lambda x : x**2, even_numbers)))
+z = lambda x: pow(x, 2)
+print(tuple(map(z, even_numbers)))
