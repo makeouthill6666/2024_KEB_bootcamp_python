@@ -90,13 +90,67 @@
 # print(sum(map(int, numbers))) #????
 
 
-def squares(n):
-    return n*n
+# def squares(n):
+#     return n*n
+#
+# even_numbers =[i for i in range(51) if i % 2 == 0]
+# print(even_numbers)
+#
+# print(tuple(map(squares, even_numbers)))
+# print(tuple(map(lambda x : x**2, even_numbers)))
+# z = lambda x: pow(x, 2)
+# print(tuple(map(z, even_numbers)))
+#
+#
+# def edit_story(words, func):
+#     for word in words:
+#         print(func(word))
+# stairs = ['thud','meow','thud','hiss']
+# def enliven(word) :
+#     return word.capitalize()
+#
+# edit_story(stairs, enliven)
+#
+# edit_story(stairs, lambda word : word.capitalize())
+#
+# #generator
+# range()
 
-even_numbers =[i for i in range(51) if i % 2 == 0]
-print(even_numbers)
+# def my_range(first=0, last=10, step=1):
+#     number = first
+#     while number < last:
+#         yield number
+#         number= number+step
+#
+# print(type(my_range))
+# print(my_range())
+#
+# r=my_range(1,5)
+# print(r, type(r))
+#
+# for x in r:
+#     print(x)
+#제너레이터는 한번만 순회할 수 있다!!!!!!!
 
-print(tuple(map(squares, even_numbers)))
-print(tuple(map(lambda x : x**2, even_numbers)))
-z = lambda x: pow(x, 2)
-print(tuple(map(z, even_numbers)))
+#generator comprehension
+# genobj = (pair for pair in zip(['a','b'],['1','2']))
+# print(genobj)
+# for thing in genobj:
+#     print(thing)
+
+def description(f):
+    def inner(*args):
+        print(f.__name__)
+        print(f.__doc__)
+        r=f(*args)
+        return r
+    return inner
+@description
+def squares(a):
+    """
+    제곱함수
+    """
+    return a * a
+
+result = squares(6)
+print(result)
