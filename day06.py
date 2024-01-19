@@ -96,43 +96,108 @@
 # s = desc(something)
 # s()
 
-class Pokemon():
-    pass
-    # def __init__(self, name):
-    #     print(f"포켓몬 {name} 생성")
+# class Pokemon():
+#     pass
+#     # def __init__(self, name):
+#     #     print(f"포켓몬 {name} 생성")
+# # pikachu = Pokemon("피카츄")
+# # squirtle = Pokemon("꼬부기")
+#
+# # print(pikachu)
+# # print(squirtle)
+#
+# pikachu = Pokemon()
+# squirtle = Pokemon()
+# pikachu.name = "피카츄"
+# pikachu.nemesis = squirtle
+# print(pikachu.name)
+#
+# squirtle.name = "꼬부기"
+# print(pikachu.nemesis.name)
+#
+# class Pokemon:
+#     def __init__(self):
+#         pass
+#
+# class Pokemon:
+#     def __init__(self, name):
+#         self.name = name
+#         print(f'포켓몬 {name} 생성')
+#
+#     def attack(self, target):
+#         print(f'{self.name}이(가) {target.name}을(를) 공격했다!!!')
+#
+#
+# charizard = Pokemon("리자몽")
 # pikachu = Pokemon("피카츄")
 # squirtle = Pokemon("꼬부기")
-
-# print(pikachu)
-# print(squirtle)
-
-pikachu = Pokemon()
-squirtle = Pokemon()
-pikachu.name = "피카츄"
-pikachu.nemesis = squirtle
-print(pikachu.name)
-
-squirtle.name = "꼬부기"
-print(pikachu.nemesis.name)
-
-class Pokemon:
-    def __init__(self):
-        pass
-
-class Pokemon:
-    def __init__(self, name):
-        self.name = name
-        print(f'포켓몬 {name} 생성')
-
-    def attack(self, target):
-        print(f'{self.name}이(가) {target.name}을(를) 공격했다!!!')
-
-
-charizard = Pokemon("리자몽")
-pikachu = Pokemon("피카츄")
-squirtle = Pokemon("꼬부기")
-charizard.attack(squirtle)
+# charizard.attack(squirtle)
 
 
 # print(pikachu.name)
 # print(squirtle.name)
+
+class Pokemon:
+    def __init__(self, name):
+        self.name = name
+
+    def attack(self, target):
+        print(f"{self.name}이(가) {target.name}을(를) 공격했다.")
+
+#class Pikachu:
+
+class Pikachu(Pokemon) :
+    def __init__(self, name, type):
+        super().__init__(name) #부모에게 도움받기....!!!!
+        self.type=type
+        print(f'{type} 속성이라 효과가 미미하다!')
+
+    def attack(self, target):
+        print(f"상대 {self.name}의 전광석화!!!")
+
+        # def
+
+class Squirtle(Pokemon):  # is-a
+    def __init__(self, name):
+        self.name = name
+
+    def attack(self, target):
+        print(f"상대 {self.name}의 물대포!!!")
+
+p1 = Pikachu("피카츄", "전기")
+p2 = Squirtle("꼬부기")
+# p1.electric_info
+print(p1.name, p1.type)
+p1.attack(p2)
+p2.attack(p1)
+
+
+print(issubclass(Pikachu, Pokemon))
+# print(issubclass(Agumon, Pokemon))
+
+class Animal:
+    def says(self):
+        return 'I speak!'
+
+class Horse(Animal):
+    def says(self):
+        return '말소리'
+
+class Donkey(Animal):
+    def says(self):
+        return '당나귀 소리'
+
+class Mule(Donkey, Horse):
+    def says(self):
+        return '노새 소리'
+
+class Hinny(Horse, Donkey) :
+    def says(self):
+        return '버새 소리'
+m1 = Mule()
+h1 = Hinny()
+print(Hinny.__mro__)
+print(h1.says())
+print(m1.says())
+
+
