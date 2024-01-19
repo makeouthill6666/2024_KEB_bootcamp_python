@@ -211,7 +211,7 @@ class SwimingMixin:
         return f"{self.name}은(는) 비전머신 03 파도타기를 배울 수 있다..."
 class Pokemon:
     def __init__(self, name):
-        self.name = name
+        self.hidden_name = name
     def attack(self):
         print (f"{self.name}은(는) 싸운다")
 
@@ -221,7 +221,7 @@ class Pokemon:
 
     def set_name(self, new_name):
         print("inside setter")
-        self.name = new_name
+        self.hidden_name = new_name
 
 class Charizrad(Pokemon, FlyingMixin) :
     pass
@@ -238,9 +238,15 @@ c1.attack()
 Charizrad.attack(c1)
 #c1을 넣지 않으면 오류발생
 
+# print(g1.name)
+# g1.name = "잉어킹"
+# print(g1.name)
+
+# print(g1.get_name())
+# g1.set_name("잉어킹")
+# print(g1.set.name())
+
+#property
 print(g1.name)
 g1.name = "잉어킹"
 print(g1.name)
-
-print(g1.get_name())
-print(g1.set_name)
