@@ -83,16 +83,56 @@
 # # except Exception: #맨 밑에 와야함 여기서 끝나기 싫으면
 # #     print("error occurs")
 
-def desc(f) :
-    def wrapper():
-        print('study')
-        f()
-    return wrapper#()
-
-@desc
-def something():
-    print("do something")
-something()
+# def desc(f) :
+#     def wrapper():
+#         print('study')
+#         f()
+#     return wrapper#()
+#
+# @desc
+# def something():
+#     print("do something")
+# something()
 # s = desc(something)
 # s()
 
+class Pokemon():
+    pass
+    # def __init__(self, name):
+    #     print(f"포켓몬 {name} 생성")
+# pikachu = Pokemon("피카츄")
+# squirtle = Pokemon("꼬부기")
+
+# print(pikachu)
+# print(squirtle)
+
+pikachu = Pokemon()
+squirtle = Pokemon()
+pikachu.name = "피카츄"
+pikachu.nemesis = squirtle
+print(pikachu.name)
+
+squirtle.name = "꼬부기"
+print(pikachu.nemesis.name)
+
+class Pokemon:
+    def __init__(self):
+        pass
+
+class Pokemon:
+    def __init__(self, name):
+        self.name = name
+        print(f'포켓몬 {name} 생성')
+
+    def attack(self, target):
+        print(f'{self.name}이(가) {target.name}을(를) 공격했다!!!')
+
+
+charizard = Pokemon("리자몽")
+pikachu = Pokemon("피카츄")
+squirtle = Pokemon("꼬부기")
+charizard.attack(squirtle)
+
+
+# print(pikachu.name)
+# print(squirtle.name)
