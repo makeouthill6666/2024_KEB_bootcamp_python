@@ -211,17 +211,20 @@ class SwimingMixin:
         return f"{self.name}은(는) 비전머신 03 파도타기를 배울 수 있다..."
 class Pokemon:
     def __init__(self, name):
-        self.hidden_name = name
+        self.__name = name
     def attack(self):
         print (f"{self.name}은(는) 싸운다")
 
-    def get_name(self):
-        print("inside getter")
-        return self.name
-
+    @property
+    def name(self):
+        # print("inside getter")
+        return self.__name
+    @name.setter
     def set_name(self, new_name):
         print("inside setter")
-        self.hidden_name = new_name
+        self.__name = new_name
+
+    # name = property (get_name,set_name)
 
 class Charizrad(Pokemon, FlyingMixin) :
     pass
@@ -246,7 +249,15 @@ Charizrad.attack(c1)
 # g1.set_name("잉어킹")
 # print(g1.set.name())
 
-#property
-print(g1.name)
-g1.name = "잉어킹"
-print(g1.name)
+# # property
+# print(g1.name)
+# g1.hidden_name = "잉어킹"
+# print(g1.hidden_name)
+# print(g1.__name) #AttributeError: 'Gyarados' object has no attribute '__name'. Did you mean: 'name'?
+print(g1.name) #이거는 됨
+print(g1._Pokemon__name) #이거는 또 됨
+
+g1.__name = "잉어킹"
+print(g1.__name)
+# g1._Pokemon__name = "잉어킹"
+# print(g1.__name)
