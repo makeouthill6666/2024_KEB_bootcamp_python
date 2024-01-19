@@ -61,24 +61,38 @@
 # except:
 #     print(f'{a}, {len(list)-1}, but got {a}')
 
-import random
+# import random
+#
+# numbers = list()
+# for i in range(5):
+#     numbers.append(random.randint(1, 100))
+# print(numbers)
+#
+#
+# numbers=[random.randint(1,100) for i in range(10)]
+# print(numbers)
+# try :
+#     pick = int(input(f"Input index : (0~{len(numbers)-1}) : "))
+#     print(numbers[pick])
+# except IndexError as err :
+#     print(f'out of range \n{err}')
+# except ValueError as err:
+#     print(f'enter an integer\n{err}')
+# except ZeroDivisionError as err:
+#     print(f"dominator cannot be 0.\n{err}")
+# # except Exception: #맨 밑에 와야함 여기서 끝나기 싫으면
+# #     print("error occurs")
 
-numbers = list()
-for i in range(5):
-    numbers.append(random.randint(1, 100))
-print(numbers)
+def desc(f) :
+    def wrapper():
+        print('study')
+        f()
+    return wrapper#()
 
+@desc
+def something():
+    print("do something")
+something()
+# s = desc(something)
+# s()
 
-numbers=[random.randint(1,100) for i in range(10)]
-print(numbers)
-try :
-    pick = int(input(f"Input index : (0~{len(numbers)-1}) : "))
-    print(numbers[pick])
-except IndexError as err :
-    print(f'out of range \n{err}')
-except ValueError as err:
-    print(f'enter an integer\n{err}')
-except ZeroDivisionError as err:
-    print(f"dominator cannot be 0.\n{err}")
-# except Exception: #맨 밑에 와야함 여기서 끝나기 싫으면
-#     print("error occurs")
