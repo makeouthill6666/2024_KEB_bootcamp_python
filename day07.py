@@ -6,8 +6,10 @@ class SwimingMixin:
     def swim(self):
         return f"{self.name}은(는) 비전머신 03 파도타기를 배울 수 있다..."
 class Pokemon:
-    def __init__(self, name):
+    def __init__(self, name, hp):
         self.__name = name
+        self.__hp = hp
+
     def attack(self):
         print (f"{self.name}은(는) 싸운다")
 
@@ -25,17 +27,20 @@ class Pokemon:
         return self.__name + "입니다"
 
     def __add__(self, target):
-        return self.__name + " + " + target.__name
+        # return self.__name + " + " + target.__name
+        return f"두 포켓몬스터 체력의 합은 {self.__hp + target.__hp}입니다."
 class Charizrad(Pokemon, FlyingMixin) :
     pass
 
 class Gyarados(Pokemon, SwimingMixin) :
     pass
 
-g1 = Gyarados("갸라도스")
-c1 = Charizrad("리자몽")
+g1 = Gyarados("갸라도스", 100)
+c1 = Charizrad("리자몽", 120)
 print(c1)
 print(g1)
 print(g1+c1)
 #  ???  +는 add를 사용해야됨
+
+
 
