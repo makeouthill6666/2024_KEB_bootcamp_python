@@ -32,28 +32,28 @@
 # print(isinstance(3.14, float))
 # print(isinstance("a", float))
 
-# while True :
-#     Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3) Quit : ")
-#     print()
-#     if Menu not in ['1', '2', '3'] :
-#         print("Please choose from the menu.")
-#     if Menu == '1' :
-#             Celsius = (float(input('Input Celsius : ')))
-#             if (isinstance(Celsius,int) or isinstance(Celsius, float)):
-#                 Celsius=(float(input('Input Celsius : ')))
-#                 print(f'{Celsius}C, {(Celsius * 9 / 5) + 32:.4f}F')
-#             else :
-#                 print("Invalid input. Please enter the number.")
-#     elif Menu == '2' :
-#         try :
-#             Fahrenheit = float(input('Input Fahrenheit : '))
-#             print(f'{Fahrenheit}F, {(Fahrenheit-32)*5/9:.4f}C')
-#         except ValueError :
-#             print("Invalid input. Please enter the number.")
-#     elif Menu == '3' :
-#         print('Terminating the program.')
-#         break
-#     print()
+while True :
+    Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3) Quit : ")
+    print()
+    if Menu not in ['1', '2', '3'] :
+        print("Please choose from the menu.")
+    if Menu == '1' :
+            Celsius = (float(input('Input Celsius : ')))
+            if (isinstance(Celsius,int) or isinstance(Celsius, float)):
+                Celsius=(float(input('Input Celsius : ')))
+                print(f'{Celsius}C, {(Celsius * 9 / 5) + 32:.4f}F')
+            else :
+                print("Invalid input. Please enter the number.")
+    elif Menu == '2' :
+        try :
+            Fahrenheit = float(input('Input Fahrenheit : '))
+            print(f'{Fahrenheit}F, {(Fahrenheit-32)*5/9:.4f}C')
+        except ValueError :
+            print("Invalid input. Please enter the number.")
+    elif Menu == '3' :
+        print('Terminating the program.')
+        break
+    print()
 
 # artists = ['BTS','Newjeans','a','b','c']
 # groups = artists
@@ -103,20 +103,20 @@
 #
 # print(ord('0'))
 #
-# # (32°F − 32) × 5/9 = 0°C
-# fahrenheit = float(input('Input Fahrenheit : '))
-# print(f'Fahrenheit: {fahrenheit}F, Celsius : {((fahrenheit-32.0) * 5/9):.4f}C')
+# (32°F − 32) × 5/9 = 0°C
+fahrenheit = float(input('Input Fahrenheit : '))
+print(f'Fahrenheit: {fahrenheit}F, Celsius : {((fahrenheit-32.0) * 5/9):.4f}C')
 
-#(0°C × 9/5) + 32 = 32°F
-# menu = input("1) Fahrenheit -> Celsius 2) Celsius -> Fahrenheit 3) Quit : ")
-# if menu == '1':
-#     fahrenheit = float(input('Input Fahrenheit : '))
-#     print(f'Fahrenheit: {fahrenheit}F, Celsius: {((fahrenheit-32.0) * 5/9):.4f}C')
-# elif menu == '2':
-#     celsius = float(input('Input Celsius : '))
-#     print(f'Celsius: {celsius}C, Fahrenheit: {((celsius*9/5)+32):.4f}F ')
-# else :
-#     print('Terminate Program.')
+(0°C × 9/5) + 32 = 32°F
+menu = input("1) Fahrenheit -> Celsius 2) Celsius -> Fahrenheit 3) Quit : ")
+if menu == '1':
+    fahrenheit = float(input('Input Fahrenheit : '))
+    print(f'Fahrenheit: {fahrenheit}F, Celsius: {((fahrenheit-32.0) * 5/9):.4f}C')
+elif menu == '2':
+    celsius = float(input('Input Celsius : '))
+    print(f'Celsius: {celsius}C, Fahrenheit: {((celsius*9/5)+32):.4f}F ')
+else :
+    print('Terminate Program.')
 
 # print(int('11', 16))
 # print(int('1A', 16))
