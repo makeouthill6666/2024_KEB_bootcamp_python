@@ -126,34 +126,34 @@
 #         #return self.__name + " + " + target.__name
 #         return f"두 포켓몬스터 체력의 합은 {self.hp + target.hp}입니다."
 
-class FlyingBehavior:
-    def fly(self):
-        return f"하늘을 훨훨 날아갑니다~"
-
-
-class JetPack(FlyingBehavior):
-    def fly(self):
-        return f"로켓추진기로 하늘을 날아갑니다!"
-
-
-class Nofly(FlyingBehavior):
-    def fly(self):
-        return f"하늘을 날 수 없습니다."
-
-
-class FlyWithWings(FlyingBehavior):
-    def fly(self):
-        return f"날개로 하늘을 훨훨 날아갑니다"
-
-class Pikachu:
-    def __init__(self,name,hp):
-        self.name = name
-        self.hp = hp
-        self.fly_behavior = Nofly()
-
-
-p1 = Pikachu("피카츄", 35)  # LSP
-print(p1.fly_behavior.fly())
+# class FlyingBehavior:
+#     def fly(self):
+#         return f"하늘을 훨훨 날아갑니다~"
+#
+#
+# class JetPack(FlyingBehavior):
+#     def fly(self):
+#         return f"로켓추진기로 하늘을 날아갑니다!"
+#
+#
+# class Nofly(FlyingBehavior):
+#     def fly(self):
+#         return f"하늘을 날 수 없습니다."
+#
+#
+# class FlyWithWings(FlyingBehavior):
+#     def fly(self):
+#         return f"날개로 하늘을 훨훨 날아갑니다"
+#
+# class Pikachu:
+#     def __init__(self,name,hp):
+#         self.name = name
+#         self.hp = hp
+#         self.fly_behavior = Nofly()
+#
+#
+# p1 = Pikachu("피카츄", 35)  # LSP
+# print(p1.fly_behavior.fly())
 # print(c1.fly_behavior.fly())
 # # print(g1)
 # # print(c1)
@@ -162,3 +162,42 @@ print(p1.fly_behavior.fly())
 # p1.set_fly_behavior(JetPack())
 # print(p1.fly_behavior.fly())
 # #print(g1+200)
+
+
+import mymath
+
+while True :
+    Menu = input("1) Celsius to Fahrenheit 2)Fahrenheit to Celsius 3)Prime number checker 4)Prime number checker between two numbers 5) Quit : ")
+    print()
+    if Menu not in ['1', '2', '3', '4', '5'] :
+        print("Please choose from the menu.")
+    if Menu == '1' :
+        pass
+    elif Menu == '2' :
+        pass
+    elif Menu == '3' :
+        try:
+            n = int(input("Input an integer: "))
+            if mymath.isprime(n):
+                print(f'{n} is a prime number')
+            else:
+                print(f'{n} is not a prime number')
+        except ValueError:
+            print("Invalid input. Please enter an integer.")
+
+    elif Menu == '4' :
+        try:
+            n1, n2 = map(int,input("Input two different numbers : ").split())
+            n1, n2 = min(n1, n2), max(n1, n2)
+
+            for n in range(n1, n2 + 1):
+                if mymath.isprime(n):
+                    print(n, end=' ')
+
+        except ValueError:
+            print("Invalid input. Please enter two different integers.")
+
+    elif Menu == '5' :
+        print('Terminating the program.')
+        break
+    print()
