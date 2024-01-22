@@ -14,3 +14,15 @@ def isprime(n) -> bool:
             i += 1
         return True
 print(isprime.__doc__)
+
+def c_to_f(Celsius):
+    if Celsius < -273.15:
+        print("Invalid input. Temperature cannot be below absolute zero.")
+        return None
+    return (Celsius * 9/5) + 32
+
+def f_to_c(Fahrenheit):
+    if Fahrenheit < -459.67:
+        print("Invalid input. Temperature cannot be below absolute zero.")
+        return None
+    return (Fahrenheit - 32) * 5/9
