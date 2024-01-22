@@ -1,3 +1,5 @@
+print(globals())
+
 def isprime(n) -> bool:
     """
     매개변수로 넘겨받은 수가 소수인지 여부를 boolean으로 리턴
